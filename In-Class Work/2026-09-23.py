@@ -7,6 +7,11 @@
 
 # x = 10 + 5
 
-amount = 100000000
+# amount = 100000000
 
-print("If I had a " + "${:,.2f}".format(amount))
+# print("If I had a " + "${:,.2f}".format(amount))
+
+import datetime
+
+
+print(datetime.now())
