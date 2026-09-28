@@ -1,13 +1,17 @@
+# Create List to store expenses
 expenseList = []
 
+# Prompt user for expenses
 fExpense = float(input(("Enter an expense or 0 to finish: ")))
 
+# Loop to collect expenses until user enters 0
 while fExpense != 0:
     if fExpense < 0:
         print("Invalid expense. Please enter a positive amount.")
     elif fExpense > 0:
         expenseList.append(fExpense)
     fExpense = float(input(("Enter an expense or 0 to finish: ")))
+
 else:
     totalNumExpenses = len(expenseList)
     totalExpenses = sum(expenseList)
@@ -15,6 +19,7 @@ else:
     smallestExpense = min(expenseList)
     biggestExpense = max(expenseList)
 
+# Print the summary of expenses
     print("Expense Summary")
     print("===================")
     print("\nNumber of expenses: " + str(totalNumExpenses))
