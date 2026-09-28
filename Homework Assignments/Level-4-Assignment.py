@@ -1,13 +1,13 @@
 expenseList = []
 
-expenses = float(input(("Enter an expense or 0 to finish: ")))
+fExpense = float(input(("Enter an expense or 0 to finish: ")))
 
-while expenses != 0:
-    if expenses < 0:
+while fExpense != 0:
+    if fExpense < 0:
         print("Invalid expense. Please enter a positive amount.")
-    elif expenses > 0:
-        expenseList.append(expenses)
-    expenses = float(input(("Enter an expense or 0 to finish: ")))
+    elif fExpense > 0:
+        expenseList.append(fExpense)
+    fExpense = float(input(("Enter an expense or 0 to finish: ")))
 else:
     totalNumExpenses = len(expenseList)
     totalExpenses = sum(expenseList)
@@ -23,9 +23,9 @@ else:
     print("Smallest expense: " + "${:,.2f}".format(smallestExpense))
     print("Largest expense: " + "${:,.2f}".format(biggestExpense))
     print("Number of small expenses: " +
-          str(len([expense for expense in expenseList if expense < 25])))
+          str(len([fExpense for fExpense in expenseList if fExpense < 25])))
     print("Number of medium expenses: " +
-          str(len([expense for expense in expenseList if 25 <= expense <= 100])))
+          str(len([fExpense for fExpense in expenseList if 25 <= fExpense <= 100])))
     print("Number of large expenses: " +
-          str(len([expense for expense in expenseList if expense > 100])))
+          str(len([fExpense for fExpense in expenseList if fExpense > 100])))
     print("\n===================")
