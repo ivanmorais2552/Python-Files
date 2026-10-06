@@ -5,9 +5,8 @@ sChoices = ["rock", "paper", "scissors"]
 iComputerScore = 0
 iPlayerScore = 0
 
+
 # Allows the player to choice their input. Print's "Invalid Choice!" if chosen input is not in the sChoices array.
-
-
 def get_player_choice():
     playerChoice = input("Choose rock, paper, or scissors: ").lower()
 
@@ -17,16 +16,14 @@ def get_player_choice():
 
     return playerChoice
 
+
 # Gives the computer a random choice from the sChoices array.
-
-
 def get_computer_choice():
     computerChoice = random.choice(sChoices)
     return computerChoice
 
+
 # Determines the winner of each round.
-
-
 def determine_winner(playerChoice, computerChoice):
     if playerChoice == computerChoice:
         return "tie"
@@ -73,6 +70,7 @@ while iGamesPlayed < iNumOfGames:
         print("You lost!")
         iComputerScore += 1
         iGamesPlayed += 1
+
 
 # Print's the results from the game
 print("-------------------------------------------")
