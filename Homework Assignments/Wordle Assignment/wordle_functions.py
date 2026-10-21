@@ -39,17 +39,17 @@ def get_guess():
     return list(guess)
 
 
-# Starts result as a list of "-". Example: ["-","-","-","-","-"]. It sets remainingLetters as an equal list to the secretWord. Than it goes through the guess, looking at the index values and comparing those to the secretWord index values. If it results in a G, it replaces the matching remainingLetters value with a None, so that isn't used again in the evaluation. Same for the Y and if nothing it stays as a -.
+# Starts result as a list of "-". Example: ["-","-","-","-","-"]. It sets remainingLetters as an equal list to the secretWord. Than it goes through the guess, looking at the index values and comparing those to the secretWord index values. If it results in a 🟩, it replaces the matching remainingLetters value with a None, so that isn't used again in the evaluation. Same for the 🟨 and if nothing it stays as a -.
 def evaluate_guess(guess, secretWord):
     result = ["-"] * len(guess)
     remainingLetters = list(secretWord)
     for i in range(len(guess)):
         if guess[i] == secretWord[i]:
-            result[i] = "G"
+            result[i] = "🟩"
             remainingLetters[i] = None
     for i in range(len(guess)):
-        if result[i] != "G" and guess[i] in remainingLetters:
-            result[i] = "Y"
+        if result[i] != "🟩" and guess[i] in remainingLetters:
+            result[i] = "🟨"
             remainingLetters[remainingLetters.index(guess[i])] = None
     return result
 

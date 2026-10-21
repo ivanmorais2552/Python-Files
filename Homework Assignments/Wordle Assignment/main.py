@@ -3,8 +3,8 @@ import wordle_functions as wf
 # Welcome the player and explain the feedback
 print("Welcome to Mystery Wordle!")
 print("Guess the five-letter word.")
-print("G = correct letter and position")
-print("Y = correct letter, wrong position")
+print("🟩 = correct letter and position")
+print("🟨 = correct letter, wrong position")
 print("- = letter is not in the word")
 
 # Repeat the game until the player chooses to stop
