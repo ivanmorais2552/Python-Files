@@ -10,8 +10,7 @@ class pet:
         self.happiness = 50
         self.bond = 0
 
-    def sleep(self, time: int):
-        self.time = time
+    def sleep(time: int):
         if time <= 3:
             pet.happiness += 10
             pet.hunger -= 10
@@ -23,7 +22,7 @@ class pet:
             pet.hunger -= 50
             pet.hunger
 
-    def eat(self, food: str):
+    def eat(food: str):
         special_foods = ["Apple", "Steak", "Chicken", "Bone"]
         bad_foods = ["Chocolate" "Grapes"]
         if food in special_foods:
