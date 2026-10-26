@@ -1,10 +1,14 @@
 from BankAccount import BankAccount as ba
 
+# start of program
 print("\nWelcome to IRM Bank\n")
+
+# user creates their profile here
 user = ba(input("Enter your name: "))
 
 print("\nPlease choose an option")
 
+# while True, the user can keep making transactions and viewing their account until they close it.
 while True:
     print("\n1. Make a deposit")
     print("2. Make a withdrawal")
